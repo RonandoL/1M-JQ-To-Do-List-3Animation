@@ -14,6 +14,7 @@ $(document).ready(function() {
   // 2. put input up on page w/checkbox, x & <hr>
 
   testing for git branch changes
+  lsdkjf;as d;asldfjk
             $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "<a class='remove'>x</a><hr></li>");
   // 7a. save to localStorage: .setItem("key", $("value")
             localStorage.setItem("listItems", $("#list-items").html());
