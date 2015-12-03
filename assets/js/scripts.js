@@ -12,6 +12,8 @@ $(document).ready(function() {
         if (item) {  // if there is text inputted, then put input on page, (implicit: else don't)
 // INPUT
   // 2. put input up on page w/checkbox, x & <hr>
+
+  testing for git branch changes
             $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "<a class='remove'>x</a><hr></li>");
   // 7a. save to localStorage: .setItem("key", $("value")
             localStorage.setItem("listItems", $("#list-items").html());
