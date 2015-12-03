@@ -10,12 +10,21 @@ $(document).ready(function() {
         var item = $("#todo-list-item").val();
   // 4. stop blank <li> entries using (IF/else)
         if (item) {  // if there is text inputted, then put input on page, (implicit: else don't)
-// INPUT
-  // 2. put input up on page w/checkbox, x & <hr>
 
-  testing for git branch changes
-  lsdkjf;as d;asldfjk
-            $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "<a class='remove'>x</a><hr></li>");
+// INPUT
+  // 9. Easter Egg: car, Car, cat, Cat, dog, Dog, kim, Kim results in image displayed
+            if ((item === "car") || (item === "Car")) {
+                  $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "&nbsp; &nbsp;" + "<img src='assets/images/camaro.jpg'>" + "<a class='remove'>x</a><hr></li>");
+            } else if ((item === "dog") || (item === "Dog")) {
+                  $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "&nbsp; &nbsp;" + "<img src='assets/images/dog.png'>" + "<a class='remove'>x</a><hr></li>");
+            } else if ((item === "cat") || (item === "Cat")) {
+                  $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "&nbsp; &nbsp;" + "<img src='assets/images/cat.jpg'>" + "<a class='remove'>x</a><hr></li>");
+            } else if ((item === "kim") || (item === "Kim")) {
+                  $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "&nbsp; &nbsp;" + "<img src='assets/images/kim.jpg'>" + "<a class='remove'>x</a><hr></li>");
+            } else {
+  // 2. put input up on page w/checkbox, x & <hr>
+                  $("#list-items").append("<li><input class='checkbox' type='checkbox'>" + item + "<a class='remove'>x</a><hr></li>");
+            }
   // 7a. save to localStorage: .setItem("key", $("value")
             localStorage.setItem("listItems", $("#list-items").html());
   // 3. clear value out of input field
@@ -45,10 +54,7 @@ $(document).ready(function() {
   // 7c. save to localStorage: .setItem("key", $("value")
             localStorage.setItem("listItems", $("#list-items").html());
         });
-
     });
-
-
 });
 
 
